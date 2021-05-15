@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import products from '../data/allProductsData';
 import { Link, Route, Switch } from "react-router-dom";
 import { FaEuroSign, FaRegHeart } from "react-icons/fa";
 import './Featured.scss';
 
 function Featured(props) {
-    const featured = products.filter(item => item.featured);
+    const featured = props.featuredArray.filter(item => item.featured);
 
 
     const featuredDisplay = featured.map((item, index) => {
@@ -19,7 +18,7 @@ function Featured(props) {
                     <div>
                         <div className="img"  style={{backgroundImage: `url(${item.image})`, backgroundRepeat:  `no-repeat`, backgroundPosition: `center`, backgroundSize: 'contain'}}/>
                         <h2>{item.name}</h2>
-                        <p>{item.spec}</p>
+                        <p>{item.shortDescription}</p>
                         <h2 class="price"><FaEuroSign style={{fontSize: '0.7em'}} />{item.price}</h2>
                     </div>
                 </Link>

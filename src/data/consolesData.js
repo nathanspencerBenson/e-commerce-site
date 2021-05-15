@@ -21,7 +21,7 @@ export const consolesData = [
             playstationImage2,
             playstationImage3
         ],
-        spec: [
+        shortDescription: [
             
             'hardware ray tracing, ',
             '120 fps, ',
@@ -36,14 +36,14 @@ export const consolesData = [
         category: 'Console',
         id: 'switch',
         name: 'Nintendo Switch - Console',
-        price: 350.00,
+        price: 349.99,
         image: switchImage1,
         gallery: [
             switchImage1,
             switchImage2,
             switchImage3
         ],
-        spec: [
+        shortDescription: [
            '6.2" screen, ', 
            '120 fps, ', 
            '9h battery life'
@@ -56,14 +56,14 @@ export const consolesData = [
         category: 'Console',
         id: 'xboxX',
         name: 'Xbox Series X - Console',
-        price: 500,
+        price: 499.99,
         image:xboxImage1,
         gallery: [
             xboxImage1,
             xboxImage2,
             xboxImage3
         ],
-        spec: [
+        shortDescription: [
             'hardware ray tracing, ',
             'Auto HDR, ',
             '4K @ 60fps, ',
@@ -77,14 +77,14 @@ export const consolesData = [
         category: 'Console',
         id: 'switch',
         name: 'Nintendo Switch - Console',
-        price: 350.00,
+        price: 349.99,
         image: switchImage1,
         gallery: [
             switchImage1,
             switchImage2,
             switchImage3
         ],
-        spec: [
+        shortDescription: [
            '6.2" screen, ', 
            '120 fps, ', 
            '9h battery life'

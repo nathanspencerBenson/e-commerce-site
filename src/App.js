@@ -12,6 +12,7 @@ import ShoppingCart from './pages/ShoppingCart';
 function App() {
   const [ savedItems, setSavedItems ] = useState([]);
 
+
   const addSavedItem = (item) => {
     const  result = savedItems.some(function(el ) {
       return el.id === item.id
