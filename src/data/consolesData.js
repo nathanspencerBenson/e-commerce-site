@@ -22,7 +22,7 @@ export const consolesData = [
             playstationImage3
         ],
         spec: [
-            'ultra-high speed SSD hard drive, ',
+            
             'hardware ray tracing, ',
             '120 fps, ',
             '8K output, ',
@@ -44,8 +44,8 @@ export const consolesData = [
             switchImage3
         ],
         spec: [
-           '6.2" screen', 
-           '120 fps', 
+           '6.2" screen, ', 
+           '120 fps, ', 
            '9h battery life'
 
         ],
@@ -64,9 +64,9 @@ export const consolesData = [
             xboxImage3
         ],
         spec: [
-            'hardware ray tracing',
-            'Auto HDR',
-            '4K @ 60fps',
+            'hardware ray tracing, ',
+            'Auto HDR, ',
+            '4K @ 60fps, ',
             '1TB Custom SSD'
 
         ],
@@ -85,8 +85,8 @@ export const consolesData = [
             switchImage3
         ],
         spec: [
-           '6.2" screen', 
-           '120 fps', 
+           '6.2" screen, ', 
+           '120 fps, ', 
            '9h battery life'
 
         ],

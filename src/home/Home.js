@@ -3,11 +3,11 @@ import ContainerImages from './HomeImageContainer';
 import Featured from './Featured';
 import './Home.scss';
 
-function Home() {
+function Home(props) {
     return (
         <div className="home">
             <ContainerImages />
-            <Featured />
+            <Featured addSavedItem={props.addSavedItem} savedItems={props.savedItems} />
             
         </div>
     )
