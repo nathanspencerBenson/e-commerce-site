@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import Navbar from './navbar/Navbar';
-import Home from './pages/Home';
+import Home from './home/Home';
 import Playstation from './pages/Playstation';
 import Xbox from './pages/Xbox';
 import Nintendo from './pages/Nintendo';
