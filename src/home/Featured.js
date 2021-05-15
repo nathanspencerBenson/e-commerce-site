@@ -11,17 +11,13 @@ function Featured() {
     const featuredDisplay = featured.map((item, index) => {
         return(
             <div className="featured-item" key={index}>
-                <div className="favouriteIcon">
-                    <Link to="/home" >
-                        <FaRegHeart />
-                    </Link> 
-                </div> 
+                        <FaRegHeart className="favouriteIcon" onClick={(e) => e.target.classList.toggle('favouriteIcon-active')} />
                 <Link to={"/shoppingcart"}>
                     <div>
                         <div className="img"  style={{backgroundImage: `url(${item.image})`, backgroundRepeat:  `no-repeat`, backgroundPosition: `center`, backgroundSize: 'cover'}}/>
                         <h2>{item.name}</h2>
                         <p>{item.spec}</p>
-                        <h2><FaEuroSign style={{fontSize: '0.7em'}} />{item.price}</h2>
+                        <h2 class="price"><FaEuroSign style={{fontSize: '0.7em'}} />{item.price}</h2>
                     </div>
                 </Link>
             </div>

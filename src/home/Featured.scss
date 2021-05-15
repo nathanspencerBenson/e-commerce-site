@@ -37,14 +37,11 @@
       .favouriteIcon {
         position: absolute;
         right: 20px;
-
-        a {
-          color: rgba(255, 0, 0, 0.342);
-
-          &:hover {
-            color: red;
-          }
-        }
+        color: rgba(255, 0, 0, 0.342);
+        cursor: pointer;
+      }
+      .favouriteIcon-active {
+        color: red;
       }
       .img {
         width: 100%;
@@ -52,6 +49,9 @@
       }
       h2 {
         color: #333333;
+      }
+      .price {
+        color: red;
       }
 
       p {
