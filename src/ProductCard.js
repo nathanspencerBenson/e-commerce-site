@@ -9,7 +9,7 @@ function ProductCard(props, index) {
         if(props.item.minimumAge) {
             return ( <p className="color-text-container"> EGI Rating: Ages <span className="color-text">{props.item.minimumAge}</span> <span className="color-text">and Over </span>  | <span className="color-text">{props.item.releaseDate}</span> </p>)
         } else {
-            return (<p>Release Date:  <span className="color-text">{props.item.releaseDate}</span> </p>)
+            return (<p className="color-text-container">Release Date:  <span className="color-text">{props.item.releaseDate}</span> </p>)
         }
     }
     return (

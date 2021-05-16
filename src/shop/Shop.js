@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Navbar from '../navbar/Navbar';
 import ProductCard from '../ProductCard';
 import allProducts from '../data/allProductsData';
-import games from '../data/playstationGamesData';
+import playstationGames from '../data/playstationGamesData';
+import xboxGames from '../data/xboxGamesData';
 import { consolesData } from '../data/consolesData';
+import nintendoGames from '../data/nintendoGamesData';
 import "./Shop.scss";
 
 function Shop(props) {
@@ -37,10 +39,10 @@ function Shop(props) {
                 <ul>
                     <li onClick={() => selectCategory(allProducts, 'All Products')}>ALL PRODUCTS</li>
                     <li onClick={() => selectCategory(consolesData, 'Consoles')}>CONSOLES</li>
-                    <li>PLAYSTATION</li>
-                    <li>XBOX</li>
-                    <li>NINTENDO</li>
-                    <li onClick={() => selectCategory(games, 'Video Games')}>VIDEO GAMES</li>
+                    <li onClick={() => selectCategory(playstationGames, 'Playstation')}>PLAYSTATION </li>
+                    <li onClick={() => selectCategory(xboxGames, 'Xbox')}>XBOX</li>
+                    <li onClick={() => selectCategory(nintendoGames, 'Nintendo')}>NINTENDO</li>
+                    <li onClick={() => selectCategory([...playstationGames, ...xboxGames], 'Video Games')}>VIDEO GAMES</li>
                 </ul>
 
 
