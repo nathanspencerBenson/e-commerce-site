@@ -47,7 +47,7 @@ function Navbar(props) {
                         <div className="image" style={{backgroundImage: `url(${item.image})`, backgroundRepeat:  `no-repeat`, backgroundPosition: `center`, backgroundSize: 'cover'}} />
                         <div className="text">
                             <h3>{item.name}</h3>
-                            <p>{item.spec}</p>
+                            <p>{item.shortDescription}</p>
                             <h4><FaIcons.FaEuroSign />{item.price}</h4>
                         </div>
                             <FaIcons.FaTrashAlt className="deleteIcon" onClick={() => {deleteSavedItem(item.id)}}/>

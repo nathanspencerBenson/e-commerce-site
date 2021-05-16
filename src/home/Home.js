@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.scss';
 import ContainerImages from './HomeImageContainer';
+import Carousel from './Carousel';
 import Featured from './Featured';
 import PromotingArticle from './PromotingArticle';
 import products from '../data/allProductsData';
@@ -10,9 +11,9 @@ function Home(props) {
     return (
         <div className="home">
             <ContainerImages />
-            <Featured addSavedItem={props.addSavedItem} savedItems={props.savedItems} featuredArray={products} />
+            <Carousel title={'FEATURED'}  addSavedItem={props.addSavedItem} savedItems={props.savedItems} featuredArray={products} />
             <PromotingArticle /> 
-            <Featured addSavedItem={props.addSavedItem} savedItems={props.savedItems} featuredArray={playstationGames} />
+            <Featured title={'LATEST GAMES'}  addSavedItem={props.addSavedItem} savedItems={props.savedItems} featuredArray={playstationGames} />
         </div>
     )
 }

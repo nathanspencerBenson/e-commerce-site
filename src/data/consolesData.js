@@ -73,26 +73,9 @@ export const consolesData = [
         featured: true,
         saved: false,
     },
-    {
-        category: 'Console',
-        id: 'switch',
-        name: 'Nintendo Switch - Console',
-        price: 349.99,
-        image: switchImage1,
-        gallery: [
-            switchImage1,
-            switchImage2,
-            switchImage3
-        ],
-        shortDescription: [
-           '6.2" screen, ', 
-           '120 fps, ', 
-           '9h battery life'
-
-        ],
-        featured: true,
-        saved: false,
-    }
+   
+    
+    
 
 
 ]

@@ -1,0 +1,88 @@
+.carasouel-featured-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px;
+  width: 250px;
+  overflow: hidden;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 1220px) {
+    width: 200px;
+    height: 300px;
+    h2,
+    p,
+    .price {
+      font-size: 0.9em;
+    }
+  }
+  @media (max-width: 620.98px) {
+    height: 250px;
+    h2,
+    p,
+    .price {
+      font-size: 0.7em;
+    }
+  }
+
+  .favouriteIcon {
+    position: absolute;
+    right: 20px;
+    color: rgba(65, 65, 65, 0.205);
+    cursor: pointer;
+    font-size: 2em;
+    @media (max-width: 620.98px) {
+      font-size: 1em;
+    }
+  }
+  .favouriteIcon-active {
+    color: red;
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
+    @media (max-width: 1220px) {
+      width: 150px;
+      height: 150px;
+      border: 2ox solid red;
+    }
+
+    @media (max-width: 991.98px) {
+      height: 150px;
+      width: 125px;
+    }
+    @media (max-width: 620.98px) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  h2 {
+    color: #333333;
+  }
+  .price {
+    position: absolute;
+    bottom: 20px;
+    color: red;
+    text-align: center;
+    width: 80%;
+  }
+
+  p {
+    width: 90%;
+    color: #666666;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

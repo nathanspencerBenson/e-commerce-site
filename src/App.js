@@ -11,6 +11,7 @@ import ShoppingCart from './pages/ShoppingCart';
 
 function App() {
   const [ savedItems, setSavedItems ] = useState([]);
+  const [ featuredArray, setFeaturedArray ] = useState([]);
 
 
   const addSavedItem = (item) => {
@@ -31,7 +32,7 @@ function App() {
         <Navbar savedItems={savedItems} setSavedItems={setSavedItems} />
         <Switch>
           <Route path='/' exact>
-            <Home addSavedItem={addSavedItem} savedItems={savedItems} setSavedItems={setSavedItems}/>
+            <Home addSavedItem={addSavedItem} savedItems={savedItems} setSavedItems={setSavedItems} featuredArray={featuredArray}/>
           </Route>
           <Route path='/playstation' component={Playstation}/>
           <Route path='/xbox' component={Xbox}/>
