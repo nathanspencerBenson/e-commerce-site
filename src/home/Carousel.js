@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link, Route, Switch } from "react-router-dom";
 import { FaEuroSign, FaRegHeart } from "react-icons/fa";
 import './Carousel.scss';
@@ -7,6 +7,19 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 
 function Carousel(props) {
     const featured = props.featuredArray.filter(item => item.featured);
+
+    const shuffle = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      useEffect(() => {
+         props.setFeaturedArray(shuffle(props.featuredArray))
+
+      }, [])
+
 
 
     const carasouelDisplay = featured.map((item, index) => {
@@ -19,7 +32,7 @@ function Carousel(props) {
                             }} />
 
                         </span>
-                <Link to={"/shoppingcart"}>
+                <Link to={"/shop"}>
                     <div>
                         <div className="img" style={{backgroundImage: `url(${item.image})`, backgroundRepeat:  `no-repeat`, backgroundPosition: `center`, backgroundSize: 'contain'}}/>
                         <h2>{item.name}</h2>
@@ -41,7 +54,7 @@ function Carousel(props) {
 
     return (
         <div>
-            <div className="featured-container">
+            <div className="carousel-container">
             <h1>{props.title}</h1>
             <AliceCarousel mouseTracking controlsStrategy="responsive" autoHeight="auto"  responsive={responsive} className="featured-items-container">
                 {carasouelDisplay}

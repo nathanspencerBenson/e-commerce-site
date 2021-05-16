@@ -11,7 +11,7 @@ function ContainerImages() {
                     <h1>With code: GAMERS2021 </h1>
                 </div>
                 <div className="shop-now-button">
-                    <Link to="/shoppingcart">
+                    <Link to="/shop">
                         <span>Shop Now</span>
                     </Link>
                 </div>

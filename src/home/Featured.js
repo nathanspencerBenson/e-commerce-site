@@ -16,7 +16,7 @@ function Featured(props) {
                             e.target.classList.toggle('favouriteIcon-active');
                              props.addSavedItem(item);
                             }} />
-                <Link to={"/shoppingcart"}>
+                <Link to={"/shop"}>
                     <div>
                         <div className="img"  style={{backgroundImage: `url(${item.image})`, backgroundRepeat:  `no-repeat`, backgroundPosition: `center`, backgroundSize: 'contain'}}/>
                         <h2>{item.name}</h2>

@@ -1,3 +1,23 @@
+.carousel-container {
+  position: relative;
+  z-index: 1;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f1f1f1;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 0 10px 20px 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  h1 {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
 .carasouel-featured-item {
   position: relative;
   display: flex;
@@ -85,4 +105,18 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+.alice-carousel {
+  padding-left: 60px;
+}
+
+.alice-carousel__prev-btn-item {
+  font-weight: 900;
+  font-size: 60px;
+  z-index: 20;
+}
+
+.alice-carousel__next-btn-item {
+  font-size: 60px;
+  font-weight: 900;
 }

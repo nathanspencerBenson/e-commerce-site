@@ -13,7 +13,9 @@ const playStationGamesData = [
         new: true,
         featured: true,
         saved: false,
-        price: 69.99
+        price: 69.99,
+        minimumAge: 16,
+        releaseDate: 2021
 
     },
     {
@@ -25,7 +27,9 @@ const playStationGamesData = [
         new: true,
         featured: true,
         saved: false,
-        price: 49.99
+        price: 49.99,
+        minimumAge: 16,
+        releaseDate: 2020
 
     },
     {
@@ -37,7 +41,8 @@ const playStationGamesData = [
         new: true,
         featured: true,
         saved: false,
-        price: 49.99
+        price: 49.99,minimumAge: 18,
+        releaseDate: 2020
 
     },
     {
@@ -49,7 +54,9 @@ const playStationGamesData = [
         new: true,
         featured: true,
         saved: false,
-        price: 69.99
+        price: 69.99,
+        minimumAge:  18,
+        releaseDate: 2021
 
     },
 

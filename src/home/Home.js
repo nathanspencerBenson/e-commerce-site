@@ -11,7 +11,7 @@ function Home(props) {
     return (
         <div className="home">
             <ContainerImages />
-            <Carousel title={'FEATURED'}  addSavedItem={props.addSavedItem} savedItems={props.savedItems} featuredArray={products} />
+            <Carousel title={'FEATURED'}  addSavedItem={props.addSavedItem} savedItems={props.savedItems} setFeaturedArray={props.setFeaturedArray} featuredArray={products} />
             <PromotingArticle /> 
             <Featured title={'LATEST GAMES'}  addSavedItem={props.addSavedItem} savedItems={props.savedItems} featuredArray={playstationGames} />
         </div>

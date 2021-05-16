@@ -8,6 +8,7 @@ import Playstation from './pages/Playstation';
 import Xbox from './pages/Xbox';
 import Nintendo from './pages/Nintendo';
 import ShoppingCart from './pages/ShoppingCart';
+import Shop from './shop/Shop';
 
 function App() {
   const [ savedItems, setSavedItems ] = useState([]);
@@ -32,11 +33,14 @@ function App() {
         <Navbar savedItems={savedItems} setSavedItems={setSavedItems} />
         <Switch>
           <Route path='/' exact>
-            <Home addSavedItem={addSavedItem} savedItems={savedItems} setSavedItems={setSavedItems} featuredArray={featuredArray}/>
+            <Home addSavedItem={addSavedItem} savedItems={savedItems} setSavedItems={setSavedItems} featuredArray={featuredArray} setFeaturedArray={setFeaturedArray}/>
           </Route>
           <Route path='/playstation' component={Playstation}/>
           <Route path='/xbox' component={Xbox}/>
           <Route path='/nintendo' component={Nintendo}/>
+          <Route path='/shop'>
+            <Shop addSavedItem={addSavedItem} savedItems={savedItems}/>
+          </Route> 
           <Route path='/shoppingcart' component={ShoppingCart} />
         </Switch>
 

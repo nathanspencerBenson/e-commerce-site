@@ -29,6 +29,7 @@ export const consolesData = [
             '825GB Custom SSD'
 
         ],
+        releaseDate: 2020,
         featured: true,
         saved: false,
     },
@@ -51,6 +52,7 @@ export const consolesData = [
         ],
         featured: true,
         saved: false,
+        releaseDate: 2019
     },
     {
         category: 'Console',
@@ -72,6 +74,7 @@ export const consolesData = [
         ],
         featured: true,
         saved: false,
+        releaseDate: 2020,
     },
    
     
