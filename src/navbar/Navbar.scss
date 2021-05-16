@@ -145,9 +145,14 @@ span {
 
     p {
       width: 150px;
-      height: 100px;
       color: rgb(126, 125, 125);
       font-size: 0.9em;
+      display: block;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     ul {
       padding: 20px;
