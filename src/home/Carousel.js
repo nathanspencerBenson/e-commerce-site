@@ -8,15 +8,8 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 function Carousel(props) {
     const featured = props.featuredArray.filter(item => item.featured);
 
-    const shuffle = (array) => {
-        for (let i = array.length - 1; i > 0; i--) {
-          let j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-        }
-      }
-
       useEffect(() => {
-         props.setFeaturedArray(shuffle(props.featuredArray))
+         props.setFeaturedArray(props.shuffle(props.featuredArray))
 
       }, [])
 

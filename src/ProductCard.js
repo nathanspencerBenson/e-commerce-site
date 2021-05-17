@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route, Switch } from "react-router-dom";
 import { FaEuroSign, FaRegHeart } from "react-icons/fa";
 import './ProductCard.scss';
+import { HiOutlineShoppingBag } from 'react-icons/hi';
 
 function ProductCard(props, index) {
 
@@ -18,15 +19,21 @@ function ProductCard(props, index) {
                             e.target.classList.toggle('favouriteIcon-active');
                              props.addSavedItem(props.item);
                             }} />
+                        
+                        
                     <Link to={"/shop"}><div className="img"  style={{backgroundImage: `url(${props.item.image})`, backgroundRepeat:  `no-repeat`, backgroundPosition: `center`, backgroundSize: 'contain'}}/></Link>
                 <Link to={"/shop"}>
                     <div className="text-container">
                         <h2>{props.item.name}</h2>
                         {displayRequiredAge()}
                         <p>{props.item.shortDescription}</p>
+                        <div className="button-price-container">
                         <h2 className="price"><FaEuroSign style={{fontSize: '0.7em'}} />{props.item.price}</h2>
+                        <button><HiOutlineShoppingBag className="button-icon" /> Add To Bag</button>
+                        </div>
                     </div>
                 </Link>
+                
         </div>
     )
 }

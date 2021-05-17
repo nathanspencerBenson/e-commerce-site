@@ -9,14 +9,21 @@ import nintendoGames from '../data/nintendoGamesData';
 import "./Shop.scss";
 
 function Shop(props) {
-    console.log(props)
 
- 
+ const videoGames = [...playstationGames, ...xboxGames, ...nintendoGames];
+
+ useEffect(() => {
+     props.shuffle(playstationGames);
+     props.shuffle(xboxGames);
+     props.shuffle(nintendoGames);
+     props.shuffle(videoGames);
+     props.shuffle(allProducts);
+ }, [])
 
     const selectCategory = (categorySelected, titleDisplay) => {
         props.setCategory([...categorySelected]);
         props.setTitle(titleDisplay);
-
+    
 
     }
 
@@ -42,14 +49,13 @@ function Shop(props) {
                     <li onClick={() => selectCategory(playstationGames, 'Playstation')}>PLAYSTATION </li>
                     <li onClick={() => selectCategory(xboxGames, 'Xbox')}>XBOX</li>
                     <li onClick={() => selectCategory(nintendoGames, 'Nintendo')}>NINTENDO</li>
-                    <li onClick={() => selectCategory([...playstationGames, ...xboxGames, ...nintendoGames], 'Video Games')}>VIDEO GAMES</li>
+                    <li onClick={() => selectCategory(videoGames, 'Video Games')}>VIDEO GAMES</li>
                 </ul>
 
 
             </div>
             <div className="products-container">
                 <header><h1>{props.title}</h1>  <p>{props.category.length} results</p></header>
-            <div className="immortals-image"></div>
             {displayProducts(props.category)}
             </div>
 
