@@ -13,6 +13,8 @@ import Shop from './shop/Shop';
 function App() {
   const [ savedItems, setSavedItems ] = useState([]);
   const [ featuredArray, setFeaturedArray ] = useState([]);
+  const [ category, setCategory] = useState([]);
+  const [ title, setTitle ] = useState('');
 
 
   const addSavedItem = (item) => {
@@ -33,13 +35,13 @@ function App() {
         <Navbar savedItems={savedItems} setSavedItems={setSavedItems} />
         <Switch>
           <Route path='/' exact>
-            <Home addSavedItem={addSavedItem} savedItems={savedItems} setSavedItems={setSavedItems} featuredArray={featuredArray} setFeaturedArray={setFeaturedArray}/>
+            <Home addSavedItem={addSavedItem} savedItems={savedItems} setSavedItems={setSavedItems} featuredArray={featuredArray} setFeaturedArray={setFeaturedArray} setCategory={setCategory} category={category} title={title} setTitle={setTitle}/>
           </Route>
           <Route path='/playstation' component={Playstation}/>
           <Route path='/xbox' component={Xbox}/>
           <Route path='/nintendo' component={Nintendo}/>
           <Route path='/shop'>
-            <Shop addSavedItem={addSavedItem} savedItems={savedItems}/>
+            <Shop addSavedItem={addSavedItem} savedItems={savedItems} setCategory={setCategory} category={category} title={title} setTitle={setTitle}/>
           </Route> 
           <Route path='/shoppingcart' component={ShoppingCart} />
         </Switch>

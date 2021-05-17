@@ -55,5 +55,9 @@
     width: 200px;
     border: none;
     border-radius: 40px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

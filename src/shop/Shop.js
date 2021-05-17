@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../navbar/Navbar';
 import ProductCard from '../ProductCard';
 import allProducts from '../data/allProductsData';
@@ -9,19 +9,19 @@ import nintendoGames from '../data/nintendoGamesData';
 import "./Shop.scss";
 
 function Shop(props) {
+    console.log(props)
 
-    const [ category, setCategory] = useState([...allProducts]);
-    const [ title, setTitle ] = useState('All Products');
+ 
 
     const selectCategory = (categorySelected, titleDisplay) => {
-        setCategory([...categorySelected]);
-        setTitle(titleDisplay);
+        props.setCategory([...categorySelected]);
+        props.setTitle(titleDisplay);
 
 
     }
 
-    const displayProducts = (productType) => {
-        const products = productType.map((item, index) => {
+    const displayProducts = (category) => {
+        const products = category.map((item, index) => {
             return (
                 <ProductCard item={item} index={index} key={index} addSavedItem={props.addSavedItem} />
                 
@@ -42,15 +42,15 @@ function Shop(props) {
                     <li onClick={() => selectCategory(playstationGames, 'Playstation')}>PLAYSTATION </li>
                     <li onClick={() => selectCategory(xboxGames, 'Xbox')}>XBOX</li>
                     <li onClick={() => selectCategory(nintendoGames, 'Nintendo')}>NINTENDO</li>
-                    <li onClick={() => selectCategory([...playstationGames, ...xboxGames], 'Video Games')}>VIDEO GAMES</li>
+                    <li onClick={() => selectCategory([...playstationGames, ...xboxGames, ...nintendoGames], 'Video Games')}>VIDEO GAMES</li>
                 </ul>
 
 
             </div>
             <div className="products-container">
-                <header><h1>{title}</h1>  <p>{category.length} results</p></header>
+                <header><h1>{props.title}</h1>  <p>{props.category.length} results</p></header>
             <div className="immortals-image"></div>
-            {displayProducts(category)}
+            {displayProducts(props.category)}
             </div>
 
             

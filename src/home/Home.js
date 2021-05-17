@@ -12,8 +12,8 @@ function Home(props) {
         <div className="home">
             <ContainerImages />
             <Carousel title={'FEATURED'}  addSavedItem={props.addSavedItem} savedItems={props.savedItems} setFeaturedArray={props.setFeaturedArray} featuredArray={products} />
-            <PromotingArticle /> 
-            <Featured title={'LATEST GAMES'}  addSavedItem={props.addSavedItem} savedItems={props.savedItems} featuredArray={playstationGames} />
+            <PromotingArticle setCategory={props.setCategory} setTitle={props.setTitle} /> 
+            <Featured title={'LATEST GAMES'}  addSavedItem={props.addSavedItem} savedItems={props.savedItems} featuredArray={playstationGames}  />
         </div>
     )
 }
