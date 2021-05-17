@@ -6,8 +6,8 @@ import * as SiIcons from 'react-icons/si';
 
 export const SidebarData = [
     {
-        title: "Home",
-        path: '/',
+        title: "Shop",
+        path: '/shop',
         icon: <AiIcons.AiFillHome />,
         cName: 'sidebar-text'
     },

@@ -64,9 +64,10 @@ function Navbar(props) {
                 <Link to="#" className="menu-bars">
                     <FaIcons.FaBars onClick={showSidebar} style={{color: 'red'}}/>
                 </Link>
-                <h1>
+                <Link to="/"><h1>
                     Gamer Paradise
                 </h1>
+                </Link>
                 <div className="computer-nav-links">
                     {navItems}
                 </div>
