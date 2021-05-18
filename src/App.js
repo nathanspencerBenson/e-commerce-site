@@ -8,11 +8,14 @@ import Home from './home/Home';
 import Playstation from './pages/Playstation';
 import Xbox from './pages/Xbox';
 import Nintendo from './pages/Nintendo';
-import ShoppingCart from './pages/ShoppingCart';
+import ShoppingCart from './shoppingcart/ShoppingCart';
 import Shop from './shop/Shop';
+
+import playstationGamesData from './data/playstationGamesData';
 
 function App() {
   const [ savedItems, setSavedItems ] = useState([]);
+  const [ basket, setBasket ] = useState([...playstationGamesData]);
   const [ featuredArray, setFeaturedArray ] = useState([]);
   const [ category, setCategory] = useState(allProductsData);
   const [ title, setTitle ] = useState('All Products');
@@ -40,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar savedItems={savedItems} setSavedItems={setSavedItems} />
+        <Navbar savedItems={savedItems} setSavedItems={setSavedItems} basket={basket} />
         <Switch>
           <Route path='/' exact>
             <Home shuffle={shuffle} addSavedItem={addSavedItem} savedItems={savedItems} setSavedItems={setSavedItems} featuredArray={featuredArray} setFeaturedArray={setFeaturedArray} setCategory={setCategory} category={category} title={title} setTitle={setTitle}/>
@@ -49,9 +52,11 @@ function App() {
           <Route path='/xbox' component={Xbox}/>
           <Route path='/nintendo' component={Nintendo}/>
           <Route path='/shop'>
-            <Shop shuffle={shuffle} addSavedItem={addSavedItem} savedItems={savedItems} setCategory={setCategory} category={category} title={title} setTitle={setTitle}/>
+            <Shop shuffle={shuffle} basket={basket} setBasket={setBasket} addSavedItem={addSavedItem} savedItems={savedItems} setCategory={setCategory} category={category} title={title} setTitle={setTitle}/>
           </Route> 
-          <Route path='/shoppingcart' component={ShoppingCart} />
+          <Route path='/shoppingcart'>
+            <ShoppingCart basket={basket} setBasket={setBasket} />
+          </Route>
         </Switch>
 
       </Router>

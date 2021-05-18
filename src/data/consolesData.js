@@ -32,6 +32,7 @@ export const consolesData = [
         releaseDate: 2020,
         featured: true,
         saved: false,
+        quantity: 1
     },
     {
         category: 'Console',
@@ -52,7 +53,8 @@ export const consolesData = [
         ],
         featured: true,
         saved: false,
-        releaseDate: 2019
+        releaseDate: 2019,
+        quantity: 1
     },
     {
         category: 'Console',
@@ -75,6 +77,7 @@ export const consolesData = [
         featured: true,
         saved: false,
         releaseDate: 2020,
+        quantity: 1
     },
    
     

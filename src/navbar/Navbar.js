@@ -81,7 +81,7 @@ function Navbar(props) {
                 </div>
                 </div>
                 <Link to="/shoppingcart" className="nav-icons">
-                    <HiIcons.HiOutlineShoppingBag style={{color: 'red'}} />
+                    <span className="basket-count">{props.basket.length}<HiIcons.HiOutlineShoppingBag style={{color: 'red'}} /></span>
                 </Link>
             </div>
             <nav className={sidebar ? 'side-menu active' : 'side-menu'}>

@@ -20,6 +20,37 @@ function Shop(props) {
      props.shuffle(allProducts);
  }, [])
 
+
+//  const addToBasket = (item) => {
+//     const  result = props.basket.some(function(el ) {
+//       return el.id === item.id
+//     });
+//     if (result) {
+//       props.setBasket(props.basket.filter(el => el.id !== item.id))
+//     }
+//     else props.setBasket([...props.basket, item]);
+//   };  const changeQty = (id, delta) =>
+const changeQty = (id, delta) =>
+props.setBasket(
+  props.basket.map(
+    (item) => (item.id === id ? { ...item, quantity: item.quantity + delta } : item)
+  )
+);
+
+  const addToBasket = (newItem) => {
+    // check if already in cart
+    const alreadyInBasket = props.basket.map((cItem) => cItem.id)
+      .includes(newItem.id);
+    // if in cart add 1 to qty
+    if (alreadyInBasket) {
+      changeQty(newItem.id, 1);
+    } else {
+      // if not add complete item
+      props.setBasket([...props.basket, newItem]);
+    }
+    console.log(props.basket)
+  };
+
     const selectCategory = (categorySelected, titleDisplay) => {
         props.setCategory([...categorySelected]);
         props.setTitle(titleDisplay);
@@ -30,7 +61,7 @@ function Shop(props) {
     const displayProducts = (category) => {
         const products = category.map((item, index) => {
             return (
-                <ProductCard item={item} index={index} key={index} addSavedItem={props.addSavedItem} />
+                <ProductCard item={item} index={index} key={index} addSavedItem={props.addSavedItem} basket={props.basket} addToBasket={addToBasket} />
                 
             )
         })

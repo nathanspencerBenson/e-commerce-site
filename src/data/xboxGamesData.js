@@ -9,6 +9,7 @@ const xboxGamesData = [
     {
         name: 'FIFA 21',
         id: 'fifa-21',
+        category: 'Video Game',
         image: fifa21,
         shortDescription: `Feel Next Level in FIFA 21 on PlayStationⓇ5, Xbox Series X, and Xbox Series S with new features that take The World's Game from visual to visceral.`,
         console: 'Xbox Series X',
@@ -17,12 +18,14 @@ const xboxGamesData = [
         saved: false,
         price: 69.99,
         minimumAge: 3,
-        releaseDate: 2021
+        releaseDate: 2021,
+        quantity: 1
 
     },
     {
         name: 'WATCHDOGS: Legion',
         id: 'watchdogs-legion',
+        category: 'Video Game',
         image: watchdogs,
         shortDescription: `Hacking is your weapon - weaponised London's Tech infrastructure, and unleash dedsec's mastery of technology: hijack armed combat drones, reconstruct past events using augmented reality to discover who is behind the terror attacks`,
         console: 'Xbox Series X',
@@ -31,12 +34,14 @@ const xboxGamesData = [
         saved: false,
         price: 59.99,
         minimumAge: 18,
-        releaseDate: 2020
+        releaseDate: 2020,
+        quantity: 1
 
     },
     {
         name: 'Mortal Combat 11 Ultimate',
         id: 'mortal-combat-11',
+        category: 'Video Game',
         image: mortalcombat,
         shortDescription: `Take control of earthrealm's protectors in the game's two critically acclaimed, time-bending story campaigns as they race to stop kronika from rewinding time and rebooting history`,
         console: 'Xbox Series X',
@@ -45,12 +50,14 @@ const xboxGamesData = [
         saved: false,
         price: 69.99,
         minimumAge: 16,
-        releaseDate: 2021
+        releaseDate: 2021,
+        quantity: 1
 
     },
     {
         name: 'Immortals Fenyx Rising',
         id: 'immortals-fenyx-rising',
+        category: 'Video Game',
         image: immortals,
         shortDescription: `Immortals Fenyx Rising brings grand mythological adventure to life. Play as Fenyx, a new winged demigod on a quest to save the Greek gods and their home from a dark curse. Take on mythological beasts, master the legendary powers of the gods and defeat Typhon, the deadliest Titan in Greek mythology, in an epic fight for the ages`,
         console: 'Xbox Series X',
@@ -59,7 +66,8 @@ const xboxGamesData = [
         saved: false,
         price: 59.99,
         minimumAge: 12,
-        releaseDate: 2020
+        releaseDate: 2020,
+        quantity: 1
 
     },
 

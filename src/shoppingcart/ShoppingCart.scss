@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.shopping-cart {
+  display: flex;
+  justify-content: space-around;
+  background: #f1f1f1;
+  font-family: "Lato", sans-serif;
+  min-height: 90vh;
+
+  .shopping-cart-content {
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 5% 0;
+
+    h1 {
+      background: #087186;
+      padding: 2%;
+    }
+
+    .product-card {
+      justify-content: flex-start;
+
+      .price {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+      }
+
+      .text-container {
+        margin-left: 0;
+        p {
+          width: 100%;
+        }
+      }
+
+      .quantity-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 30px;
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: fit-content;
+          height: 50px;
+          font-size: 2em;
+          border: none;
+          color: black;
+
+          &:hover {
+            background-color: white;
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid black;
+          height: 50px;
+          width: 75px;
+          text-align: center;
+          color: red;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+  .proceed-checkout-container {
+    height: fit-content;
+    padding: 5%;
+    border: 2px solid #087186;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    h1 {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .price {
+      color: #087186;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+
+    button {
+      color: white;
+      background: #087186;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 10px;
+      &:hover {
+        cursor: pointer;
+        background: #066174;
+      }
+    }
+  }
+}

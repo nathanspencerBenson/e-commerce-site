@@ -29,7 +29,10 @@ function ProductCard(props, index) {
                         <p>{props.item.shortDescription}</p>
                         <div className="button-price-container">
                         <h2 className="price"><FaEuroSign style={{fontSize: '0.7em'}} />{props.item.price}</h2>
-                        <button><HiOutlineShoppingBag className="button-icon" /> Add To Bag</button>
+                        <button onClick={()=> {
+                            props.addToBasket(props.item);
+                            console.log(props.basket);
+                        }}><HiOutlineShoppingBag className="button-icon" /> Add To Bag</button>
                         </div>
                     </div>
                 </Link>
