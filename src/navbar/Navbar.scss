@@ -173,6 +173,12 @@ span {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       }
 
       .deleteIcon {
@@ -182,6 +188,19 @@ span {
         &:hover {
           cursor: pointer;
         }
+      }
+    }
+
+    .add-to-bag-button {
+      margin-top: 2%;
+      color: white;
+      background: #087186;
+      padding: 5px 5px;
+      width: 60%;
+      border: none;
+      &:hover {
+        cursor: pointer;
+        background: #066174;
       }
     }
   }

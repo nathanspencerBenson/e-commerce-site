@@ -28,10 +28,27 @@ function Navbar(props) {
 
     const deleteSavedItem = (id) => {
         props.setSavedItems(props.savedItems.filter(item => item.id !== id))
-        
-       
-
     }
+
+    const addToBasket = (newItem) => {
+        // check if already in cart
+        const alreadyInBasket = props.basket.map((cItem) => cItem.id)
+          .includes(newItem.id);
+        // if in cart add 1 to qty
+        if (alreadyInBasket) {
+          changeQty(newItem.id, 1);
+        } else {
+          // if not add complete item
+          props.setBasket([...props.basket, newItem]);
+        }
+      };
+
+      const changeQty = (id, delta) =>
+props.setBasket(
+  props.basket.map(
+    (item) => (item.id === id ? { ...item, quantity: item.quantity + delta } : item)
+  )
+);
     
     const savedItemsDisplay = () => {
         if (props.savedItems.length === 0) {
@@ -48,7 +65,7 @@ function Navbar(props) {
                         <div className="text">
                             <h3>{item.name}</h3>
                             <p>{item.shortDescription}</p>
-                            <h4><FaIcons.FaEuroSign />{item.price}</h4>
+                            <div><h4> Price: <FaIcons.FaEuroSign />{item.price}</h4> <button class="add-to-bag-button" onClick={() => {addToBasket(item); deleteSavedItem(item.id)}}>Add to Bag</button></div>
                         </div>
                             <FaIcons.FaTrashAlt className="deleteIcon" onClick={() => {deleteSavedItem(item.id)}}/>
                     </li>

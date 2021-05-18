@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar savedItems={savedItems} setSavedItems={setSavedItems} basket={basket} />
+        <Navbar savedItems={savedItems} setSavedItems={setSavedItems} basket={basket} setBasket={setBasket} />
         <Switch>
           <Route path='/' exact>
             <Home shuffle={shuffle} addSavedItem={addSavedItem} savedItems={savedItems} setSavedItems={setSavedItems} featuredArray={featuredArray} setFeaturedArray={setFeaturedArray} setCategory={setCategory} category={category} title={title} setTitle={setTitle}/>
